@@ -118,7 +118,7 @@ def recordArticle(pageDict):
    nsBuffer.append((id))
    nsBuflen += 1
 
-   if linkBuflen >= 10000:
+   if nsBuflen >= 10000:
    	cursor.executemany("""
 		INSERT INTO namespace (id)
                 VALUES (%s)

@@ -369,6 +369,7 @@ if aBuflen > 0:
 		""",textBuffer)
 	articleBuffer = []
 	textBuffer = []
+	aBuflen = 0
 
 #cursor.execute("DROP TABLE outlinks")
 
