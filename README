@@ -66,6 +66,12 @@ MySQL Connector/J: http://www.mysql.com/downloads/connector/j/
 Lucene 3.0: http://lucene.apache.org
 Trove: http://trove4j.sourceforge.net/
 
+pyre2 [optional] will speed up all regular expression parsing.
+    hg clone https://re2.googlecode.com/hg/re2 re2.r56 && cd re2.r56 && hg update 56 && make -j4 && sudo make install
+    easy_install re2
+NOTE: re2 does not correctly handle Unicode. However, none of the regexes
+use re.UNICODE, so I believe that its output will be identical.
+
 
 USAGE
 

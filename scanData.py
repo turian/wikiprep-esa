@@ -18,7 +18,13 @@ IMPORTANT: If you use XML output from a recent version of Wikiprep
 '''
 
 import sys
-import re
+try:
+    import re2 as re
+    re.set_fallback_notification(re.FALLBACK_WARNING)
+    print >> sys.stderr, "Using re2 for faster regex parsing"
+except:
+    import re
+    print >> sys.stderr, "WARNING: re2 not detected. Regex parsing will be slow. See the README for install instructions."
 import MySQLdb
 import signal
 
