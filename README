@@ -7,7 +7,13 @@ This is an effort to implement Explicit Semantic Analysis (ESA) as described in 
 
 You can find this paper at: http://www.jair.org/media/2669/live-2669-4346-jair.pdf
 
+Create a MySQL database 'wiki':
+    mysql -u root -p
+ 
+    CREATE DATABASE wiki;
+
 This implementation consists of:
+* scanLinks.py:
 * scanData.py : that reads Wikiprep output into a MySQL database.
 It creates "article","text" and "pagelinks" tables.
 
